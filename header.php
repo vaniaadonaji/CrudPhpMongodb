@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="./public/bootstrap5/bootstrap.min.css">
     <link rel="stylesheet" href="./public/fontawesome-free-6.1.1-web/css/all.css">
     <link rel="stylesheet" href="./public/css/estilo.css">
-    <title>Holiiiii</title>
+    <title>Crud BMV</title>
 </head>
 <body>

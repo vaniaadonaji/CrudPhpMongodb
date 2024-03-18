@@ -3,14 +3,14 @@
 
     class Conexion {
         public static function conectar() {
-           try {
-                $usuario = "admin";
-                $password = "02Mayovd";
+            try {
+                $servidor = "127.0.0.1";
+                $puerto = "27017";
                 $BD = "crud";
-                $cadenaConexion = "mongodb+srv://". 
-                                    $usuario . ":" . 
-                                    $password . "@clustermongo1.0ht5mnv.mongodb.net/" . 
-                                    $BD . "?retryWrites=true&w=majority&appName=clustermongo1";
+                $cadenaConexion = "mongodb://" . 
+                                    $servidor . ":" . 
+                                    $puerto ."/". 
+                                    $BD;
                 $cliente = new MongoDB\Client($cadenaConexion);
                 return $cliente->selectDatabase($BD);
            } catch (\Throwable $th) {
