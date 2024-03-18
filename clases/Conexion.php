@@ -4,17 +4,13 @@
     class Conexion {
         public static function conectar() {
            try {
-                $servidor = "127.0.0.1";
-                $puerto = "27017";
-                $usuario = "mongoadmin";
-                $password = "123456";
+                $usuario = "admin";
+                $password = "02Mayovd";
                 $BD = "crud";
-                $cadenaConexion = "mongodb://" . 
+                $cadenaConexion = "mongodb+srv://". 
                                     $usuario . ":" . 
-                                    $password . "@". 
-                                    $servidor .":". 
-                                    $puerto ."/". 
-                                    $BD;
+                                    $password . "@clustermongo1.0ht5mnv.mongodb.net/" . 
+                                    $BD . "?retryWrites=true&w=majority&appName=clustermongo1";
                 $cliente = new MongoDB\Client($cadenaConexion);
                 return $cliente->selectDatabase($BD);
            } catch (\Throwable $th) {
@@ -22,3 +18,4 @@
            }
         }
     }
+    
